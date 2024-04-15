@@ -23,7 +23,7 @@
   <!-- Device -->
   <project path="device/oneplus/dumpling" remote="nk" name="android_device_oneplus_dumpling" />
   <project path="device/oneplus/cheeseburger" remote="nk" name="android_device_oneplus_cheeseburger" revision="f9/a13" />
-  <project path="device/oneplus/msm8998-common" remote="nk" name="4.14-android_device_oneplus_msm8998_common" revision="nk/dyn-a14" />
+  <project path="device/oneplus/msm8998-common" remote="ed" name="4.14-android_device_oneplus_msm8998_common" />
 
   <remove-project name="LineageOS/android_device_qcom_sepolicy" />
   <project path="device/qcom/sepolicy" remote="ed" name="android_device_qcom_sepolicy" />
@@ -81,5 +81,8 @@
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
   </project>
+
+  <!-- Revert to this head for now as latest doesn't build -->
+  <extend-project name="crdroidandroid/android_packages_apps_GameSpace" revision="5e77e3fe1ae6ca20c3a7fe61491fe8f63f5a7e14" />
 
 </manifest>
