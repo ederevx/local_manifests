@@ -3,26 +3,26 @@
   <remote
     name="ed"
     fetch="ssh://git@github.com/ederevx"
-    revision="matrixx" />
+    revision="refs/heads/a14" />
 
   <remote
     name="nk"
     fetch="ssh://git@github.com/nkeor"
-    revision="nk/a14" />
+    revision="refs/heads/nk/a14" />
 
   <remote
     name="gl"
     fetch="ssh://git@github.com/roberto-sartori-gl"
-    revision="gl" />
+    revision="refs/heads/gl" />
 
   <remote
     name="github_ssh"
     fetch="ssh://git@github.com"
-    revision="main" />
+    revision="refs/heads/main" />
 
   <!-- Device -->
-  <project path="device/oneplus/dumpling" remote="nk" name="android_device_oneplus_dumpling" />
-  <project path="device/oneplus/cheeseburger" remote="nk" name="android_device_oneplus_cheeseburger" revision="f9/a13" />
+  <project path="device/oneplus/dumpling" remote="ed" name="android_device_oneplus_dumpling" />
+  <project path="device/oneplus/cheeseburger" remote="ed" name="android_device_oneplus_cheeseburger" />
   <project path="device/oneplus/msm8998-common" remote="ed" name="4.14-android_device_oneplus_msm8998_common" />
 
   <remove-project name="LineageOS/android_device_qcom_sepolicy" />
@@ -35,7 +35,7 @@
   <!-- Vendor -->
   <project path="vendor/oneplus/cheeseburger" remote="github" name="TheMuppets/proprietary_vendor_oneplus_cheeseburger" revision="lineage-20" />
   <project path="vendor/oneplus/dumpling" remote="github" name="TheMuppets/proprietary_vendor_oneplus_dumpling" revision="lineage-20" />
-  <project path="vendor/oneplus/msm8998-common" remote="nk" name="4.14-proprietary_vendor_oneplus_msm8998-common" />
+  <project path="vendor/oneplus/msm8998-common" remote="ed" name="4.14-proprietary_vendor_oneplus_msm8998-common" />
   <project path="vendor/oneplus/google" remote="github_ssh" name="TheRomFactory/proprietary_vendor_oneplus_google" revision="f9/a13" />
   <project path="vendor/oss/timekeep" remote="nk" name="4.14-timekeep" revision="mms8998_op/s-mr1"/>
 
@@ -46,7 +46,7 @@
   <project path="vendor/qcom/opensource/commonsys-intf/display" remote="ed" name="android_vendor_qcom_opensource_display-commonsys-intf" />
 
   <remove-project name="android_vendor_lineage" />
-  <project path="vendor/lineage" remote="ed" name="android_vendor_lineage" />
+  <project path="vendor/lineage" remote="ed" name="matrixx-android_vendor_lineage" />
 
   <!-- Hardware -->
   <project path="hardware/oneplus" remote="github" name="LineageOS/android_hardware_oneplus" revision="lineage-21" />
