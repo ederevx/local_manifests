@@ -77,7 +77,13 @@
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
   </project>
 
-  <!-- Revert to this head for now as latest doesn't build -->
+  <!-- Android -->
   <extend-project name="crdroidandroid/android_packages_apps_GameSpace" revision="5e77e3fe1ae6ca20c3a7fe61491fe8f63f5a7e14" />
+
+  <remove-project name="android_build_soong"/>
+  <project path="build/soong" name="matrixx-android_build_soong" remote="ed" groups="pdk,tradefed" >
+    <linkfile dest="Android.bp" src="root.bp" />
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
+  </project>
 
 </manifest>
