@@ -40,9 +40,6 @@
   <remove-project name="LineageOS/android_vendor_qcom_opensource_display-commonsys-intf" />
   <project path="vendor/qcom/opensource/commonsys-intf/display" remote="ed" name="android_vendor_qcom_opensource_display-commonsys-intf" />
 
-  <remove-project name="android_vendor_lineage" />
-  <project path="vendor/lineage" remote="ed" name="matrixx-android_vendor_lineage" />
-
   <!-- Hardware -->
   <project path="hardware/oneplus" remote="github" name="LineageOS/android_hardware_oneplus" revision="lineage-21" />
 
@@ -75,15 +72,6 @@
     <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8550/audio/Android.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
-  </project>
-
-  <!-- Android -->
-  <extend-project name="crdroidandroid/android_packages_apps_GameSpace" revision="5e77e3fe1ae6ca20c3a7fe61491fe8f63f5a7e14" />
-
-  <remove-project name="android_build_soong"/>
-  <project path="build/soong" name="matrixx-android_build_soong" remote="ed" groups="pdk,tradefed" >
-    <linkfile dest="Android.bp" src="root.bp" />
-    <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
   </project>
 
 </manifest>
