@@ -28,6 +28,7 @@
   <project path="kernel/oneplus/msm8998" remote="ed" name="x-ft_kernel_oneplus_msm8998" revision="develop-pelt" />
 
   <!-- Vendor -->
+  <project path="vendor/lineage-priv" remote="ed" name="4.14-vendor_lineage-priv" />
   <project path="vendor/oneplus/cheeseburger" remote="github" name="TheMuppets/proprietary_vendor_oneplus_cheeseburger" revision="lineage-21" />
   <project path="vendor/oneplus/dumpling" remote="github" name="TheMuppets/proprietary_vendor_oneplus_dumpling" revision="lineage-21" />
   <project path="vendor/oneplus/msm8998-common" remote="ed" name="4.14-proprietary_vendor_oneplus_msm8998-common" />
