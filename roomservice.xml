@@ -28,6 +28,6 @@
   <project path="vendor/oneplus/google" remote="github_ssh" name="TheRomFactory/proprietary_vendor_oneplus_google" revision="f9/a13" />
 
   <!-- Hardware -->
-  <project path="hardware/oneplus" remote="github" name="LineageOS/android_hardware_oneplus" revision="lineage-21" />
+  <project path="hardware/oplus" remote="ed" name="android_hardware_oplus" />
   <project path="hardware/sony/timekeep" name="LineageOS/android_hardware_sony_timekeep" revision="lineage-21" />
 </manifest>
