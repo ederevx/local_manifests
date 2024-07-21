@@ -28,5 +28,5 @@
 
   <!-- Hardware -->
   <project path="hardware/oplus" remote="ed" name="android_hardware_oplus" />
-  <project path="hardware/sony/timekeep" name="LineageOS/android_hardware_sony_timekeep" revision="lineage-21" />
+  <project path="hardware/sony/timekeep" remote="github" name="LineageOS/android_hardware_sony_timekeep" revision="lineage-21" />
 </manifest>
