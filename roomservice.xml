@@ -27,6 +27,6 @@
   <project path="vendor/oneplus/msm8998-common" remote="ed" name="4.14-proprietary_vendor_oneplus_msm8998-common" />
 
   <!-- Hardware -->
-  <project path="hardware/oplus" remote="ed" name="android_hardware_oplus" />
+  <project path="hardware/oneplus" remote="ed" name="android_hardware_oneplus" />
   <project path="hardware/sony/timekeep" remote="github" name="LineageOS/android_hardware_sony_timekeep" revision="lineage-21" />
 </manifest>
