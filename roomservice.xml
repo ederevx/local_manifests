@@ -19,6 +19,7 @@
 
   <!-- Kernel -->
   <project path="kernel/oneplus/msm8998" remote="ed" name="x-ft_kernel_oneplus_msm8998" revision="stable" />
+  <project path="prebuilts/clang/kernel/linux-x86/clang-r416183b" remote="github" name="LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b" clone-depth="1" revision="lineage-20.0" />
 
   <!-- Vendor -->
   <project path="vendor/lineage-priv" remote="ed" name="4.14-vendor_lineage-priv" />
