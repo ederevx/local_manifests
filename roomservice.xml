@@ -2,7 +2,7 @@
 <manifest>
   <remote name="ed"
           fetch="ssh://git@github.com/ederevx"
-          revision="refs/heads/a15" />
+          revision="refs/heads/a16" />
 
   <remote name="5T"
           fetch="ssh://git@github.com/Oneplus-5-T"
