@@ -29,5 +29,16 @@
   <!-- Hardware -->
   <project path="hardware/oneplus" remote="ed" name="android_hardware_oneplus" />
   <project path="hardware/sony/timekeep" remote="github" name="LineageOS/android_hardware_sony_timekeep" revision="lineage-21" />
-  <project path="hardware/qcom-caf/msm8998-4-19" remote="ed" name="android_hardware_qcom-caf_msm8998-4-19" revision="lineage-22.2-msm8998-4.19" />
+  <project path="hardware/qcom-caf/msm8998-4-19" remote="ed" name="android_hardware_qcom-caf_msm8998-4-19" revision="lineage-23.2-msm8998-4.19" />
+
+  <!-- Opensource overrides: msm8998 hooks (verified no other commonsys/sepolicy_vndr
+       projects in this manifest need msm8998-specific changes) -->
+  <remove-project name="LineageOS/android_vendor_qcom_opensource_display-commonsys-intf"
+                  path="vendor/qcom/opensource/commonsys-intf/display" />
+  <project path="vendor/qcom/opensource/commonsys-intf/display" remote="ed" name="android_vendor_qcom_opensource_display-commonsys-intf-4-19" revision="lineage-23.2-msm8998-4.19" />
+
+  <!-- name is shared with device/qcom/sepolicy (no revision override) - path disambiguates -->
+  <remove-project name="LineageOS/android_device_qcom_sepolicy"
+                  path="device/qcom/sepolicy-legacy-um" />
+  <project path="device/qcom/sepolicy-legacy-um" remote="ed" name="android_device_qcom_sepolicy-4-19" revision="lineage-23.2-msm8998-4.19" />
 </manifest>
