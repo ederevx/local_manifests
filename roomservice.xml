@@ -41,4 +41,9 @@
   <remove-project name="LineageOS/android_device_qcom_sepolicy"
                   path="device/qcom/sepolicy-legacy-um" />
   <project path="device/qcom/sepolicy-legacy-um" remote="ed" name="android_device_qcom_sepolicy-4-19" revision="lineage-23.2-msm8998-4.19" />
+
+  <!-- msm8998 isn't in QSSI_SUPPORTED_PLATFORMS upstream, breaks display_intf_headers -->
+  <remove-project name="LineageOS/android_hardware_qcom-caf_common"
+                  path="hardware/qcom-caf/common" />
+  <project path="hardware/qcom-caf/common" remote="ed" name="android_hardware_qcom-caf_common-4-19" revision="lineage-23.2-msm8998-4.19" />
 </manifest>
