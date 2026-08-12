@@ -45,5 +45,23 @@
   <!-- msm8998 isn't in QSSI_SUPPORTED_PLATFORMS upstream, breaks display_intf_headers -->
   <remove-project name="LineageOS/android_hardware_qcom-caf_common"
                   path="hardware/qcom-caf/common" />
-  <project path="hardware/qcom-caf/common" remote="ed" name="android_hardware_qcom-caf_common-4-19" revision="lineage-23.2-msm8998-4.19" />
+  <project path="hardware/qcom-caf/common" remote="ed" name="android_hardware_qcom-caf_common-4-19" revision="lineage-23.2-msm8998-4.19">
+    <!-- linkfiles carried over from the stock project entry: without these,
+         unused qcom-caf SoC dirs never get their soong_namespace stub, and
+         their modules collide with each other during Soong analysis -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450-6.6/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8650/Android.bp" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8750/Android.bp" />
+  </project>
 </manifest>
