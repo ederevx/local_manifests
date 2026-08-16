@@ -39,11 +39,8 @@
   <remove-project name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom-caf/sdm660/audio" />
   <project path="hardware/qcom-caf/sdm660/audio" remote="ed" name="android_hardware_qcom-caf_audio-4-19" revision="lineage-23.2-msm8998-4.19" />
 
-  <remove-project name="LineageOS/android_hardware_qcom_display" path="hardware/qcom-caf/sdm660/display" />
-  <project path="hardware/qcom-caf/sdm660/display" remote="github_ssh" name="LineageOS/android_hardware_qcom_display" revision="lineage-23.2-caf-sdm660" />
-
   <remove-project name="LineageOS/android_hardware_qcom_media" path="hardware/qcom-caf/sdm660/media" />
-  <project path="hardware/qcom-caf/sdm660/media" remote="github_ssh" name="LineageOS/android_hardware_qcom_media" revision="lineage-23.2-caf-sdm660" />
+  <project path="hardware/qcom-caf/sdm660/media" remote="ed" name="android_hardware_qcom-caf_media-4-19" revision="lineage-23.2-msm8998-4.19" />
 
   <!-- Opensource overrides: msm8998 hooks (verified no other commonsys/sepolicy_vndr
        projects in this manifest need msm8998-specific changes) -->
