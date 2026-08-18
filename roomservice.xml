@@ -30,14 +30,14 @@
   <project path="hardware/oneplus" remote="ed" name="android_hardware_oneplus" />
   <project path="hardware/sony/timekeep" remote="github" name="LineageOS/android_hardware_sony_timekeep" revision="lineage-21" />
 
-  <!-- sdm660 CAF HAL, direct-from-LineageOS per the minimal-fork policy: audio needs
-       msm8998 added to its target_board_platform select (1-commit fork, mirrors
-       xiaomi-msm8998-devs' own fix); display/media are zero-diff on msm8998, so they
-       point straight at LineageOS unforked. These are group-gated "qcom,sdm660" in the
-       stock manifest (this device's own group is msm8998, not sdm660), so they need the
-       same remove+re-add override as the other opensource overrides below to sync at all. -->
+  <!-- sdm660 CAF HAL forks for msm8998 compatibility. These are group-gated
+       "qcom,sdm660" in the stock manifest (this device's own group is msm8998,
+       not sdm660), so they need remove+re-add overrides to sync at all. -->
   <remove-project name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom-caf/sdm660/audio" />
   <project path="hardware/qcom-caf/sdm660/audio" remote="ed" name="android_hardware_qcom-caf_audio-4-19" revision="lineage-23.2-msm8998-4.19" />
+
+  <remove-project name="LineageOS/android_hardware_qcom_display" path="hardware/qcom-caf/sdm660/display" />
+  <project path="hardware/qcom-caf/sdm660/display" remote="ed" name="android_hardware_qcom-caf_display-4-19" revision="lineage-23.2-caf-sdm660-msm8998" />
 
   <remove-project name="LineageOS/android_hardware_qcom_media" path="hardware/qcom-caf/sdm660/media" />
   <project path="hardware/qcom-caf/sdm660/media" remote="ed" name="android_hardware_qcom-caf_media-4-19" revision="lineage-23.2-msm8998-4.19" />
