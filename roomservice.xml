@@ -36,36 +36,19 @@
   <project path="hardware/oneplus" remote="ed" name="android_hardware_oneplus" />
   <project path="hardware/sony/timekeep" remote="github" name="LineageOS/android_hardware_sony_timekeep" revision="lineage-21" />
 
-  <!-- sdm660 CAF HAL forks for msm8998 compatibility. These are group-gated
-       "qcom,sdm660" in the stock manifest (this device's own group is msm8998,
-       not sdm660), so they need remove+re-add overrides to sync at all. -->
+  <!-- Minimal SDM660 HAL forks for MSM8998 4.19 compatibility. -->
   <remove-project name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom-caf/sdm660/audio" />
   <project path="hardware/qcom-caf/sdm660/audio" remote="ed" name="android_hardware_qcom-caf_audio-4-19" revision="lineage-23.2-msm8998-4.19" />
-
-  <remove-project name="LineageOS/android_hardware_qcom_display" path="hardware/qcom-caf/sdm660/display" />
-  <project path="hardware/qcom-caf/sdm660/display" remote="ed" name="android_hardware_qcom-caf_display-4-19" revision="lineage-23.2-caf-sdm660-msm8998" />
 
   <remove-project name="LineageOS/android_hardware_qcom_media" path="hardware/qcom-caf/sdm660/media" />
   <project path="hardware/qcom-caf/sdm660/media" remote="ed" name="android_hardware_qcom-caf_media-4-19" revision="lineage-23.2-msm8998-4.19" />
 
-  <!-- Opensource overrides: msm8998 hooks (verified no other commonsys/sepolicy_vndr
-       projects in this manifest need msm8998-specific changes) -->
-  <remove-project name="LineageOS/android_vendor_qcom_opensource_display-commonsys-intf"
-                  path="vendor/qcom/opensource/commonsys-intf/display" />
-  <project path="vendor/qcom/opensource/commonsys-intf/display" remote="ed" name="android_vendor_qcom_opensource_display-commonsys-intf-4-19" revision="lineage-23.2-msm8998-4.19" />
-
-  <!-- name is shared with device/qcom/sepolicy (no revision override) - path disambiguates -->
-  <remove-project name="LineageOS/android_device_qcom_sepolicy"
-                  path="device/qcom/sepolicy-legacy-um" />
-  <project path="device/qcom/sepolicy-legacy-um" remote="ed" name="android_device_qcom_sepolicy-4-19" revision="lineage-23.2-msm8998-4.19" />
-
-  <!-- msm8998 isn't in QSSI_SUPPORTED_PLATFORMS upstream, breaks display_intf_headers -->
+  <!-- Current QCOM common with the minimal MSM8998 QSSI classification. -->
   <remove-project name="LineageOS/android_hardware_qcom-caf_common"
                   path="hardware/qcom-caf/common" />
-  <project path="hardware/qcom-caf/common" remote="ed" name="android_hardware_qcom-caf_common-4-19" revision="lineage-23.2-msm8998-4.19">
-    <!-- linkfiles carried over from the stock project entry: without these,
-         unused qcom-caf SoC dirs never get their soong_namespace stub, and
-         their modules collide with each other during Soong analysis -->
+  <project path="hardware/qcom-caf/common" remote="ed"
+           name="android_hardware_qcom-caf_common-4-19"
+           revision="lineage-23.2-msm8998-4.19">
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
     <linkfile src="os_pickup_sepolicy_vndr.mk" dest="device/qcom/sepolicy_vndr/SEPolicy.mk" />
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
