@@ -24,7 +24,7 @@
   <!-- Kernel -->
   <project path="kernel/oneplus/msm8998" remote="ed"
            name="android_kernel_qcom_msm8998-4-19"
-           revision="refs/tags/stage-3-debug-edl-8m-20260828-1" />
+           revision="refs/tags/stage-3-debug-edl-8m-20260829-2" />
 
   <!-- Vendor -->
   <project path="vendor/lineage-priv" remote="ed" name="4.14-vendor_lineage-priv" revision="a14" />
