@@ -24,7 +24,7 @@
   <!-- Kernel -->
   <project path="kernel/oneplus/msm8998" remote="ed"
            name="android_kernel_qcom_msm8998-4-19"
-           revision="refs/tags/stage-3-fcm6-dload-parity-20260831-1" />
+           revision="refs/heads/msm8998-oneplus" />
 
   <!-- Vendor -->
   <project path="vendor/lineage-priv" remote="ed" name="android_vendor_lineage-priv" revision="lineage-23.2-msm8998-4.19" />
