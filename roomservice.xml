@@ -28,6 +28,9 @@
   <remove-project name="LineageOS/android_hardware_qcom_media" path="hardware/qcom-caf/sdm660/media" />
   <project path="hardware/qcom-caf/sdm660/media" remote="ed" name="android_hardware_qcom-caf_media-4-19" revision="lineage-23.2-msm8998-4.19" />
 
+  <remove-project name="LineageOS/android_hardware_qcom_display" path="hardware/qcom-caf/sdm660/display" />
+  <project path="hardware/qcom-caf/sdm660/display" remote="ed" name="android_hardware_qcom-caf_display-4-19" revision="lineage-23.2-msm8998-4.19-panel" />
+
   <!-- Current QCOM common with the minimal MSM8998 QSSI classification. -->
   <remove-project name="LineageOS/android_hardware_qcom-caf_common" path="hardware/qcom-caf/common" />
   <project path="hardware/qcom-caf/common" remote="ed" name="android_hardware_qcom-caf_common-4-19" revision="lineage-23.2-msm8998-4.19">
