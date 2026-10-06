@@ -21,6 +21,11 @@
   <!-- Hardware -->
   <project path="hardware/oneplus" remote="ed" name="android_hardware_oneplus" revision="lineage-23.2-msm8998-4.19" />
 
+  <!-- Runtime navbar toggle: the SystemUI, Shell and PhoneWindowManager half
+       that the 23.2 port dropped must ship with the framework half. -->
+  <remove-project name="LineageOS/android_frameworks_base" path="frameworks/base" />
+  <project path="frameworks/base" remote="ed" name="android_frameworks_base" revision="lineage-23.2-msm8998-4.19" />
+
   <!-- Minimal SDM660 audio HAL fork for MSM8998 4.19 compatibility. -->
   <!-- The SDM660 media HAL's msm8998 key enabled the venc PQ path, which cannot
        initialise without libgpustats.so (not shipped here); our fork drops that
