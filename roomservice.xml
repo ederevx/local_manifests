@@ -6,7 +6,7 @@
 
   <!-- Device -->
   <project path="device/oneplus/dumpling" remote="ed" name="android_device_oneplus_dumpling" revision="lineage-23.2-msm8998-4.19" />
-  <project path="device/oneplus/cheeseburger" remote="ed" name="android_device_oneplus_cheeseburger" />
+  <project path="device/oneplus/cheeseburger" remote="ed" name="android_device_oneplus_cheeseburger" revision="lineage-23.2-msm8998-4.19" />
   <project path="device/oneplus/msm8998-common" remote="ed" name="android_device_oneplus_msm8998-common-4-19" revision="lineage-23.2-msm8998-4.19" />
 
   <!-- Kernel -->
